@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/LTN_Scenes/LTN_Scene1.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
