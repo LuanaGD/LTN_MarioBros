@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CrateScript : MonoBehaviour
+{
+    private GameMasterManager gameManag;
+    public GameObject crate;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        gameManag = gameObject.GetComponent<GameMasterManager>();
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        CrateMovePos();
+    }
+
+    void CrateMovePos()
+    {
+        for (int i = 0; i < gameManag.cratePositions.Length; i++)
+        {
+            crate.transform.position = gameManag.cratePositions[i].transform.position;
+        }
+    }
+}
+
+/*Faire bouger les caisses et calculer leurs positions
+ * Renvoyer le tout au game manager pour executer les fonctions de victoire ou de perte
+ * Clear l'écran quand le camion est rempli*/
