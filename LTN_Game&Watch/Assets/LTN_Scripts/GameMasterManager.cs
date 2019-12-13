@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameMasterManager : MonoBehaviour
 {
-    public GameObject[] cratePositions;
+    public Transform[] cratePositions;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,8 @@ public class GameMasterManager : MonoBehaviour
     {
         
     }
+
+
 }
 
 /*fontion de win et lose

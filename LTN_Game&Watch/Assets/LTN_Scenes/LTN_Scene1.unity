@@ -10913,7 +10913,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2114792458}
-  - component: {fileID: 2114792457}
   - component: {fileID: 2114792459}
   m_Layer: 0
   m_Name: GameManager
@@ -10922,32 +10921,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2114792457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114792456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d310a24a9acc324aa26c7d62e72ec4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MarioMov: 0
-  LuigiMov: 0
-  MarioChara: {fileID: 3228284311570049220, guid: faa4f245cea3bcd4eab530c8a6d6abcb,
-    type: 3}
-  Luigichara: {fileID: 3228284311570049220, guid: faa4f245cea3bcd4eab530c8a6d6abcb,
-    type: 3}
-  MarioPos:
-  - {fileID: 1485979242}
-  - {fileID: 1768749360}
-  - {fileID: 887870167}
-  LuigiPos:
-  - {fileID: 676162955}
-  - {fileID: 475363494}
-  - {fileID: 599951165}
 --- !u!4 &2114792458
 Transform:
   m_ObjectHideFlags: 0
@@ -10975,49 +10948,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cratePositions:
-  - {fileID: 1830963939}
-  - {fileID: 1623877724}
-  - {fileID: 596520100}
-  - {fileID: 1211837407}
-  - {fileID: 334159757}
-  - {fileID: 303166519}
-  - {fileID: 594716676}
-  - {fileID: 1105935827}
-  - {fileID: 944708582}
-  - {fileID: 273640171}
-  - {fileID: 245401457}
-  - {fileID: 1768126537}
-  - {fileID: 1826401398}
-  - {fileID: 893209709}
-  - {fileID: 542654395}
-  - {fileID: 1964425156}
-  - {fileID: 1016112238}
-  - {fileID: 1713379205}
-  - {fileID: 519469566}
-  - {fileID: 1246186072}
-  - {fileID: 1481443079}
-  - {fileID: 1479848488}
-  - {fileID: 1873311417}
-  - {fileID: 950485411}
-  - {fileID: 1849263899}
-  - {fileID: 1910774794}
-  - {fileID: 630580775}
-  - {fileID: 778149072}
-  - {fileID: 234826323}
-  - {fileID: 12332354}
-  - {fileID: 653277940}
-  - {fileID: 723346141}
-  - {fileID: 353962308}
-  - {fileID: 897838599}
-  - {fileID: 1196411769}
-  - {fileID: 2061558784}
-  - {fileID: 1082420855}
-  - {fileID: 99221195}
-  - {fileID: 870884225}
-  - {fileID: 64475187}
-  - {fileID: 798882265}
-  - {fileID: 519054273}
-  - {fileID: 317923266}
+  - {fileID: 1830963940}
+  - {fileID: 1623877725}
+  - {fileID: 596520101}
+  - {fileID: 1211837408}
+  - {fileID: 334159758}
+  - {fileID: 303166520}
+  - {fileID: 594716677}
+  - {fileID: 1105935828}
+  - {fileID: 944708583}
+  - {fileID: 273640172}
+  - {fileID: 245401458}
+  - {fileID: 1768126538}
+  - {fileID: 1826401399}
+  - {fileID: 893209710}
+  - {fileID: 542654396}
+  - {fileID: 1964425157}
+  - {fileID: 1016112239}
+  - {fileID: 1713379206}
+  - {fileID: 519469567}
+  - {fileID: 1246186073}
+  - {fileID: 1481443080}
+  - {fileID: 1479848489}
+  - {fileID: 1873311418}
+  - {fileID: 950485412}
+  - {fileID: 1849263900}
+  - {fileID: 1910774795}
+  - {fileID: 630580776}
+  - {fileID: 778149073}
+  - {fileID: 234826324}
+  - {fileID: 12332355}
+  - {fileID: 653277941}
+  - {fileID: 723346142}
+  - {fileID: 353962309}
+  - {fileID: 897838600}
+  - {fileID: 1196411770}
+  - {fileID: 2061558785}
+  - {fileID: 1082420856}
+  - {fileID: 99221196}
+  - {fileID: 870884226}
+  - {fileID: 64475188}
+  - {fileID: 798882266}
+  - {fileID: 519054274}
+  - {fileID: 317923267}
 --- !u!1 &2117476419
 GameObject:
   m_ObjectHideFlags: 0
@@ -11108,6 +11081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119518766}
   - component: {fileID: 2119518764}
+  - component: {fileID: 2119518765}
   m_Layer: 0
   m_Name: LuigiChara
   m_TagString: Untagged
@@ -11141,6 +11115,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8721762, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2119518765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119518763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f364d7bd77f6de547ab40676d3921ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  luigiPos:
+  - {fileID: 676162956}
+  - {fileID: 475363495}
+  - {fileID: 599951166}
+  luigiChara: {fileID: 2119518763}
 --- !u!4 &2119518766
 Transform:
   m_ObjectHideFlags: 0

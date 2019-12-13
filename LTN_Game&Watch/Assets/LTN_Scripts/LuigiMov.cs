@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MarioMov : MonoBehaviour
+public class LuigiMov : MonoBehaviour
 {
-    public Transform[] MarioPos;
-    public GameObject MarioChara;
+    public Transform[] luigiPos;
+    public GameObject luigiChara;
     private int currentPos = 0;
 
     // Start is called before the first frame update
@@ -17,32 +17,32 @@ public class MarioMov : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        MarioMovement();
+        LuigiMovement();
     }
 
-    private void MarioMovement()
+    public void LuigiMovement()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             currentPos++;
 
-            if (currentPos >= 2)
+            if(currentPos >= 2)
             {
                 currentPos = 2;
             }
 
-            MarioChara.transform.position = MarioPos[currentPos].transform.position;
+            luigiChara.transform.position = luigiPos[currentPos].transform.position;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             currentPos -= 1;
 
-            if (currentPos <= 0)
+            if(currentPos <= 0)
             {
                 currentPos = 0;
             }
 
-            MarioChara.transform.position = MarioPos[currentPos].transform.position;
+            luigiChara.transform.position = luigiPos[currentPos].transform.position;
         }
     }
 }
