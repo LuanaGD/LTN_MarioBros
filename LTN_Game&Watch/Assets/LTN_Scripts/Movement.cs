@@ -20,27 +20,41 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         MarioMovement();
+        LuigiMovement();
     }
 
     public void MarioMovement()
     {
+        int i = 0;
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            MarioMov = Input.GetAxisRaw("Vertical");
-            Vector2 mPos = new Vector2(transform.position.x, transform.position.y);
-            
+            i++;
+            MarioChara.transform.position = MarioPos[i].transform.position;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            i = i-1;
+            MarioChara.transform.position = MarioPos[i].transform.position;
         }
     }
 
     public void LuigiMovement()
     {
+        int i = 0;
+        
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            LuigiMov = Input.GetAxisRaw("Vertical");
-            Vector2 lPos = new Vector2(transform.position.x, transform.position.y);
+            i++;
+            Luigichara.transform.position = LuigiPos[i].transform.position;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            i = i - 1;
+            Luigichara.transform.position = LuigiPos[i].transform.position;
         }
     }
 }

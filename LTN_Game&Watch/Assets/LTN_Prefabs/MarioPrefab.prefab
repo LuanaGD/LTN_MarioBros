@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3228284311570049223}
   - component: {fileID: 3228284311570049220}
   - component: {fileID: 3228284311570049222}
+  - component: {fileID: 2131221608502754222}
   m_Layer: 0
   m_Name: MarioPrefab
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3228284311570049273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.87, y: 0.13, z: -2.1484375}
+  m_LocalPosition: {x: -11.400002, y: 1.2300003, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,3 +80,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8305798, y: 1.1916733}
   m_EdgeRadius: 0
+--- !u!114 &2131221608502754222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228284311570049273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d310a24a9acc324aa26c7d62e72ec4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarioMov: 0
+  LuigiMov: 0
+  MarioChara: {fileID: 3228284311570049220}
+  Luigichara: {fileID: 0}
+  MarioPos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  LuigiPos: []
