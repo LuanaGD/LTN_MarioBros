@@ -5,11 +5,12 @@ using UnityEngine;
 public class GameMasterManager : MonoBehaviour
 {
     public Transform[] cratePositions;
+    public GameObject crate;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(CrateSpawnCoroutine());
     }
 
     // Update is called once per frame
@@ -18,6 +19,14 @@ public class GameMasterManager : MonoBehaviour
         
     }
 
+    IEnumerator CrateSpawnCoroutine()
+    {
+        Instantiate(crate);
+        Debug.Log("crate exist");
+        
+        yield return new WaitForSeconds(5);
+        Debug.Log("coroutine over");
+    }
 
 }
 

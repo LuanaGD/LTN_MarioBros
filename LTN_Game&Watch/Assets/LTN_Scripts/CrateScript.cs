@@ -11,7 +11,6 @@ public class CrateScript : MonoBehaviour
     void Start()
     {
         gameManag = gameObject.GetComponent<GameMasterManager>();
-
     }
 
     // Update is called once per frame
@@ -26,6 +25,15 @@ public class CrateScript : MonoBehaviour
         {
             crate.transform.position = gameManag.cratePositions[i].transform.position;
         }
+    }
+
+    IEnumerator CrateMovCoroutine()
+    {
+        yield return new WaitForSeconds(2);
+
+        CrateMovePos();
+
+        Debug.Log("Finished Crate Mov");
     }
 }
 
