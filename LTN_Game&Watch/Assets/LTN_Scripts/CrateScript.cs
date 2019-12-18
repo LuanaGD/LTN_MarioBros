@@ -6,6 +6,7 @@ public class CrateScript : MonoBehaviour
 {
     private GameMasterManager gameManag;
     public GameObject crate;
+    private bool timeCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -16,14 +17,17 @@ public class CrateScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CrateMovePos();
+        StartCoroutine(CrateMovCoroutine());
     }
 
     void CrateMovePos()
     {
-        for (int i = 0; i < gameManag.cratePositions.Length; i++)
+        if (!timeCheck)
         {
-            crate.transform.position = gameManag.cratePositions[i].transform.position;
+            for (int i = 0; i < gameManag.cratePositions.Length; i++)
+            {
+                crate.transform.position = gameManag.cratePositions[i].transform.position;
+            }
         }
     }
 
