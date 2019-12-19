@@ -5,6 +5,7 @@ using UnityEngine;
 public class LineManager : MonoBehaviour
 {
     public int lineID;
+    public bool playerHere;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +23,10 @@ public class LineManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject bodySprite = this.gameObject.transform.GetChild(0).gameObject;
-            GameObject baseArmSprite = this.gameObject.transform.GetChild(1).gameObject;
+            playerHere = true;
 
-            bodySprite.SetActive(true);
-            baseArmSprite.SetActive(true);            
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(true);    
         }
     }
 }

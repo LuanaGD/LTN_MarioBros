@@ -6,6 +6,7 @@ public class GameMasterManager : MonoBehaviour
 {
     public Transform[] cratePositions;
     public GameObject crate;
+    private CrateScript spawnedCrate;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +22,16 @@ public class GameMasterManager : MonoBehaviour
 
     IEnumerator CrateSpawnCoroutine()
     {
-        Instantiate(crate);
-        Debug.Log("crate exist");
-        
-        yield return new WaitForSeconds(5);
-        Debug.Log("coroutine over");
+        for (int i = 0; i < cratePositions.Length; i++)
+        {
+            Instantiate(crate);
+            crate.transform.position = cratePositions[0].transform.position;
+            Debug.Log("crate exist");
+
+            yield return new WaitForSeconds(3);
+            Debug.Log("coroutine over");  
+        } 
+            
     }
 
 }
