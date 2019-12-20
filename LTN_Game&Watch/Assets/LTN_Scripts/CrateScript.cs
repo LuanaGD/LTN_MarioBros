@@ -5,24 +5,24 @@ using UnityEngine;
 public class CrateScript : MonoBehaviour
 {
     //public Transform[] cratePositions;
-    private GameMasterManager crateItem;
     private GameMasterManager gameManag;
-    private int cratePos = 0;
-    private bool crateTravelFinish = false;
+
+    //private int cratePos = 0;
+    //private float mRow1 = -0.65f;
+    //private float lRow1 = -1.32f;
+    //private bool crateTravelFinish = false;
+
+    //private Vector2 nextPosition;
+    //public GameObject crate;
+
     //private bool timeCheck;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManag = transform.GetComponent<GameMasterManager>();
-        crateItem = GetComponent<GameMasterManager>();
+        //crateItem = GetComponent<GameMasterManager>();
         StartCoroutine(CrateMovCoroutine());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 
@@ -43,28 +43,44 @@ public class CrateScript : MonoBehaviour
     }*/
 
 
-    IEnumerator CrateMovCoroutine() //move crate every x seconds
+    IEnumerator CrateMovCoroutine() //move crate (this game object) every x seconds
     {
-        /*for (int i = 0; i < gameManag.cratePositions.Length; i++)
+        for (int i = 2; i <= gameManag.cratePositions.Length; i++)
         {
-            gameObject.transform.position = gameManag.cratePositions[i].transform.position;
+            yield return new WaitForSeconds(1);
+            gameManag.cratePosition[i-1].gameObject.SetActive(false);
+            gameManag.cratePosition[i].gameObject.SetActive(true); //works. BUT only ONE crate moves
+            Debug.Log("crate moved");
+            Debug.Log("move done");
+        }
+
+       /* for (int i = 0; i < gameManag.cratePositions.Length ; i++)
+        {
+            Instantiate(crate);
+            crate.transform.position = gameManag.cratePositions[0].transform.position;
+            Debug.Log("crate exist");
+
+            yield return new WaitForSeconds(3);
+            Debug.Log("coroutine over");
         }*/
 
-        while(!crateTravelFinish)
+        /*while(!crateTravelFinish)
         {
             if(cratePos != 43)
             {
                 cratePos++;
-                this.gameObject.transform.position = gameManag.cratePositions[cratePos].transform.position;
+                crate.transform.position = gameManag.cratePositions[cratePos].transform.position;
+
+
                 yield return new WaitForSeconds(2);
                 Debug.Log("Finished Crate Mov");
             }
-            if(cratePos == 43)
+            else if(cratePos == 43)
             {
                 crateTravelFinish = true;
                 Debug.Log("Finished Moving crate");
             }
-        }
+        }*/
 
         
 

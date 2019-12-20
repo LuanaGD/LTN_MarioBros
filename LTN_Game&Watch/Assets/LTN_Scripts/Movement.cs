@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Transform[] luigiPos;
-    public GameObject luigiChara;
+    //public Transform[] luigiPos;
+    public GameObject luigiBottom;
+    public GameObject luigiMid;
+    public GameObject luigiUp;
     private int currentLPos = 0;
 
-    public Transform[] MarioPos;
-    public GameObject MarioChara;
+    //public Transform[] MarioPos;
+    public GameObject marioBottom;
+    public GameObject marioMid;
+    public GameObject marioUp;
     private int currentMPos = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +38,6 @@ public class Movement : MonoBehaviour
             {
                 currentLPos = 2;
             }
-
-            luigiChara.transform.position = luigiPos[currentLPos].transform.position;
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
@@ -43,8 +47,23 @@ public class Movement : MonoBehaviour
             {
                 currentLPos = 0;
             }
+        }
 
-            luigiChara.transform.position = luigiPos[currentLPos].transform.position;
+        if(currentLPos == 0) //activation default sprites
+        {
+            luigiBottom.gameObject.SetActive(true);
+            luigiMid.gameObject.SetActive(false);
+        }
+        else if(currentLPos == 1)
+        {
+            luigiMid.gameObject.SetActive(true);
+            luigiBottom.gameObject.SetActive(false);
+            luigiUp.gameObject.SetActive(false);
+        }
+        else if(currentLPos == 2)
+        {
+            luigiUp.gameObject.SetActive(true);
+            luigiMid.gameObject.SetActive(false);
         }
     }
 
@@ -58,8 +77,6 @@ public class Movement : MonoBehaviour
             {
                 currentMPos = 2;
             }
-
-            MarioChara.transform.position = MarioPos[currentMPos].transform.position;
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -69,8 +86,23 @@ public class Movement : MonoBehaviour
             {
                 currentMPos = 0;
             }
+        }
 
-            MarioChara.transform.position = MarioPos[currentMPos].transform.position;
+        if (currentMPos == 0) //activation default sprites
+        {
+            marioBottom.gameObject.SetActive(true);
+            marioMid.gameObject.SetActive(false);
+        }
+        else if (currentMPos == 1)
+        {
+            marioMid.gameObject.SetActive(true);
+            marioBottom.gameObject.SetActive(false);
+            marioUp.gameObject.SetActive(false);
+        }
+        else if (currentMPos == 2)
+        {
+            marioUp.gameObject.SetActive(true);
+            marioMid.gameObject.SetActive(false);
         }
     }
 }

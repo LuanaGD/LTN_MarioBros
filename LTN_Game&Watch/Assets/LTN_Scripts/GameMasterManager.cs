@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameMasterManager : MonoBehaviour
 {
     public Transform[] cratePositions;
+    public GameObject[] cratePosition;
+    public GameObject[] truckLoad;
     public GameObject crate;
     private CrateScript spawnedCrate;
 
@@ -14,23 +16,25 @@ public class GameMasterManager : MonoBehaviour
         StartCoroutine(CrateSpawnCoroutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator CrateSpawnCoroutine() //instantiate the crates : OK
     {
-        
-    }
-
-    IEnumerator CrateSpawnCoroutine()
-    {
-        for (int i = 0; i < cratePositions.Length; i++)
+        while(truckLoad.Length < 9)
         {
-            Instantiate(crate);
+            cratePosition[2].gameObject.SetActive(true);
+            yield return new WaitForSeconds(4);
+            Debug.Log("coroutine over");
+        }
+
+        /*for (int i = 0; i < cratePositions.Length; i++)
+        {
+            /*Instantiate(crate);
             crate.transform.position = cratePositions[0].transform.position;
             Debug.Log("crate exist");
 
-            yield return new WaitForSeconds(3);
-            Debug.Log("coroutine over");  
-        } 
+            cratePosition[2].gameObject.SetActive(true);
+            yield return new WaitForSeconds(4);
+            Debug.Log("coroutine over");
+        }*/
             
     }
 
